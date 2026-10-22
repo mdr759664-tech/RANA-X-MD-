@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RANA-X PAIR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { background: #0f172a; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
+.input-box { background: #1e293b; border: 2px solid #334155; padding: 15px; border-radius: 30px; width: 90%; color: white; font-size: 18px; }
+.btn-pair { background: #2563eb; color: white; padding: 18px; border-radius: 30px; width: 95%; border: none; font-size: 18px; font-weight: bold; margin-top: 20px; letter-spacing: 2px; }
+.success-box { background: #ffe4e6; color: #be185d; padding: 20px; border-radius: 20px; margin-top: 30px; font-weight: bold; font-size: 20px; }
+.music-btn { position: fixed; bottom: 80px; right: 10px; background: #1e293b; padding: 10px 15px; border-radius: 20px; border: 1px solid gray; }
+.theme-btn { position: fixed; bottom: 80px; left: 10px; background: white; padding: 12px; border-radius: 50%; }
+</style>
+</head>
+<body>
+
+<h3 style="color:#94a3b8; letter-spacing:3px;">WHATSAPP NUMBER</h3>
+<input class="input-box" id="number" placeholder="+ 8801914138474" value="">
+
+<p style="color:#64748b; font-size:13px; margin-top:10px;">Country calling code is required for every country.<br>Bangladesh example: 8801712345678</p>
+
+<button class="btn-pair" onclick="getCode()">GET PAIRING CODE</button>
+
+<div id="result" style="display:none;">
+  <div class="success-box">BOT CONNECT SUCCESSFUL 😶‍🌫️🤩</div>
+  <div style="background:white; color:#065f46; padding:20px; border-radius:20px; margin-top:20px; text-align:left;">
+    <b>THANK FOR YOU CHOOSING X-TOM BABY BOT! 👑</b><br><br>
+    ✨ YOUR WHATSAPP BOT HAS BEEN SUCCESSFULLY CONNECTED!<br><br>
+    👾 GET READY FOR AN AMAZING EXPERIENCE WITH POWERFUL FEATURES!<br><br>
+    🙏 THANK YOU FOR YOUR TRUST AND SUPPORT!
+  </div>
+</div>
+
+<div class="music-btn">🎵 SIGMA MUSIC</div>
+<div class="theme-btn">☀️</div>
+
+<script>
+async function getCode(){
+  let num = document.getElementById('number').value.replace(/[^0-9]/g, "");
+  if(!num) return alert("Number দাও ভাই!");
+  document.getElementById('result').style.display="block";
+  //  Backend API Call হবে
+  // fetch(`/code?number=${num}`)
+}
+</script>
+
+</body>
+</html>
